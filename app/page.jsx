@@ -12,7 +12,7 @@ export default function Home() {
     var splits = data.query.split(" ");
     console.log(splits);
     var urlQuery = splits.join("+");
-    const fullUrl = `https:/itsfreetogoogle.it/search?q=${urlQuery}`;
+    const fullUrl = `/search?q=${urlQuery}`;
     console.log(fullUrl);
     setWebsiteUrl(fullUrl);
     setCanSeeWebsite(true);
@@ -37,7 +37,7 @@ export default function Home() {
           </Form>
         </div>
         { canSeeWebsite && <div className='mt-5'>
-          Your custom website URL is: <a href={websiteUrl} target='_blank' className='font-bold'>{ websiteUrl }</a>
+          Your custom website URL is: <a href={websiteUrl} target='_blank' className='font-bold'>{ "https://itsfreetogoogle.it" + websiteUrl }</a>
         </div>}
       </div>
     </div>
